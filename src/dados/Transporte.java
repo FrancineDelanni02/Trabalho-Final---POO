@@ -36,24 +36,6 @@ public abstract class Transporte {
 
 	public abstract double calculaCusto();
 
-	public void setDrone(Drone drone){
-		this.drone = drone;
-		situacao = Estado.ALOCADO;
-	}
-
-	public Drone getDrone(){
-		return drone;
-	}
-
-	//apenas para teste, incrementar depois
-	public void finalizarTransporte(){
-		situacao = Estado.TERMINADO;
-	}
-
-	public void cancelarTransporte(){
-		situacao = Estado.CANCELADO;
-	}
-
 	public double calcularDistanciaKm(){
 		double dLat = Math.toRadians(latitudeDestino - latitudeOrigem);
 		double dLon = Math.toRadians(longitudeDestino - longitudeOrigem);
