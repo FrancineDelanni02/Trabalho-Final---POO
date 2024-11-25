@@ -41,6 +41,10 @@ public abstract class Transporte implements Comparable<Transporte> {
 		return Integer.compare(this.numero,t.numero);
 	}
 
+	public int getNumero() {
+		return numero;
+	}
+
 	public void setDrone(Drone drone){
 		this.drone = drone;
 		situacao = Estado.ALOCADO;

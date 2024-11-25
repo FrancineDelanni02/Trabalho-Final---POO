@@ -1,0 +1,68 @@
+[33mcommit 156fe4149cf1abf392380823cd1c64bbe5aa2fa0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: 2cbf1a8 a1f01cc
+Author: FrancineDelanni02 <delannifrancine@gmail.com>
+Date:   Mon Nov 25 15:53:24 2024 -0300
+
+    resolvendo conflitos
+
+[33mcommit 2cbf1a8a2a0dfa5c503db81bddb74aab0e519778[m
+Author: FrancineDelanni02 <delannifrancine@gmail.com>
+Date:   Mon Nov 25 15:42:59 2024 -0300
+
+    adidionando modificações
+
+[33mcommit a1f01cc1f4dc4a814db529709694fef3b7b7262c[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Francine Delanni <166793882+FrancineDelanni02@users.noreply.github.com>
+Date:   Wed Nov 13 19:45:46 2024 -0300
+
+    Delete src/aplicacao/cadastroCarga.java
+
+[33mcommit 4bb030a02a2ff46d66d98319ea7dced89baea48b[m
+Author: Francine Delanni <166793882+FrancineDelanni02@users.noreply.github.com>
+Date:   Tue Nov 12 18:28:50 2024 -0300
+
+    Update TransporteCargaInanimada.java
+
+[33mcommit 552dfd1eee08a1a76a91cb9403ce3b7143f69322[m
+Author: Francine Delanni <166793882+FrancineDelanni02@users.noreply.github.com>
+Date:   Tue Nov 12 18:27:25 2024 -0300
+
+    Update Transporte.java
+
+[33mcommit ccb14687f13c92372c8552eb895f2feb46f17f3c[m
+Author: Daniella Santos <165070577+MSDaniella@users.noreply.github.com>
+Date:   Tue Nov 12 18:05:22 2024 -0300
+
+    Add files via upload
+
+[33mcommit 2d7426713565b8d71d699ebc0ef31c1ab23197e3[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: FrancineDelanni02 <delannifrancine@gmail.com>
+Date:   Tue Nov 12 17:55:07 2024 -0300
+
+    comentando ACMEAirDrones
+
+[33mcommit 36c81a3e2d57bfbf8f5e76c67583c2686b914477[m
+Author: FrancineDelanni02 <delannifrancine@gmail.com>
+Date:   Tue Nov 12 17:50:46 2024 -0300
+
+    Criando repo
+
+[33mcommit d7abb62064efd6528409b6ad3d3902be8db7d031[m
+Author: Francine Delanni <166793882+FrancineDelanni02@users.noreply.github.com>
+Date:   Tue Nov 12 17:41:27 2024 -0300
+
+    Add files via upload
+    
+    Primeiro commit
+
+[33mcommit ba70b7d110e343c4980a2563d3659c2f92db79e4[m
+Author: Francine Delanni <166793882+FrancineDelanni02@users.noreply.github.com>
+Date:   Wed Nov 6 20:33:30 2024 -0300
+
+    Update README.md
+
+[33mcommit 31cd49848b6e72cd41e12fc8a726aa8038daac7f[m
+Author: Francine Delanni <166793882+FrancineDelanni02@users.noreply.github.com>
+Date:   Wed Nov 6 20:28:37 2024 -0300
+
+    Initial commit
