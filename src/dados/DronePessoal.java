@@ -3,8 +3,9 @@ package dados;
 public class DronePessoal extends Drone {
 	private int qtdPessoas;
 
-	public DronePessoal(int codigo, double custoFixo, double autonomia) {
+	public DronePessoal(int codigo, double custoFixo, double autonomia,int qtdPessoas) {
 		super(codigo, custoFixo, autonomia);
+		this.qtdPessoas = qtdPessoas;
 	}
 
 	@Override
