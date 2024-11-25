@@ -1,8 +1,8 @@
 package dados;
 
-public abstract class Transporte {
+public abstract class Transporte implements Comparable<Transporte> {
 
-	public Transporte(int numero,String nomeCliente,String descricao,double peso, double latitudeOrigem,double latitudeDestino, double longitudeOrigem, double longitudeDestino,Estado situacao){
+	public Transporte(int numero,String nomeCliente,String descricao,double peso, double latitudeOrigem,double latitudeDestino, double longitudeOrigem, double longitudeDestino){
 		this.numero = numero;
 		this.nomeCliente = nomeCliente;
 		this.descricao = descricao;
@@ -11,7 +11,7 @@ public abstract class Transporte {
 		this.latitudeDestino = latitudeDestino;
 		this.longitudeOrigem = longitudeOrigem;
 		this.longitudeDestino = longitudeDestino;
-		this.situacao = situacao;
+		this.situacao = Estado.PENDENTE;
 	}
 
 	private int numero;
@@ -36,22 +36,23 @@ public abstract class Transporte {
 
 	public abstract double calculaCusto();
 
+	@Override
+	public int compareTo(Transporte t){
+		return Integer.compare(this.numero,t.numero);
+	}
+
 	public void setDrone(Drone drone){
 		this.drone = drone;
 		situacao = Estado.ALOCADO;
+		drone.setEstado();
+	}
+
+	public void setSituacao(Estado situacao){
+		this.situacao = situacao;
 	}
 
 	public Drone getDrone(){
 		return drone;
-	}
-
-	//apenas para teste, incrementar depois
-	public void finalizarTransporte(){
-		situacao = Estado.TERMINADO;
-	}
-
-	public void cancelarTransporte(){
-		situacao = Estado.CANCELADO;
 	}
 
 	public double calcularDistanciaKm(){
@@ -65,6 +66,17 @@ public abstract class Transporte {
 
 		double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 		return 6371 * c;
+	}
+
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append(numero).append(";").append(nomeCliente).append(";").append(descricao).append(";").append(peso).append(";").append(latitudeOrigem);
+		sb.append(";").append(latitudeDestino).append(";").append(longitudeOrigem).append(";").append(longitudeDestino).append(situacao).append(";");
+		if(drone != null)
+			sb.append(drone);
+
+		sb.append(";").append(calculaCusto());
+		return sb.toString();
 	}
 
 }

@@ -15,4 +15,15 @@ public class DroneCargaInanimada extends DroneCarga {
 		custo += (protecao ? 10 : 5);
 		return custo;
 	}
+
+	@Override
+	public boolean podeAlocar(Transporte transporte){
+		return transporte instanceof TransporteCargaInanimada;
+	}
+
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString()).append(";").append(protecao).append(";").append(calculaCustoKm());
+		return sb.toString();
+	}
 }

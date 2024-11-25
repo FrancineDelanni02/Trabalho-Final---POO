@@ -14,4 +14,16 @@ public class DroneCargaViva extends DroneCarga {
 		custo += (climatizado ? 20 : 10);
 		return custo;
 	}
+
+	@Override
+	public boolean podeAlocar(Transporte transporte){
+		return transporte instanceof TransporteCargaViva;
+	}
+
+	@Override
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString()).append(";").append(climatizado).append(";").append(calculaCustoKm());
+		return sb.toString();
+	}
 }
