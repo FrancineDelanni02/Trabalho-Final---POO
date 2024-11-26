@@ -19,7 +19,7 @@ public class TransportePessoal extends Transporte {
 	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
+		sb.append("1").append(";").append(super.toString());
 		sb.append(";").append(qtdPessoas);
 		return sb.toString();
 	}

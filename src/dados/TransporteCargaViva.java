@@ -26,7 +26,7 @@ public class TransporteCargaViva extends Transporte {
 	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
+		sb.append("3").append(";").append(super.toString());
 		sb.append(";").append(temperaturaMaxima).append(";").append(temperaturaMinima);
 		return sb.toString();
 	}

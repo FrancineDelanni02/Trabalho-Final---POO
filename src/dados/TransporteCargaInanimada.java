@@ -18,7 +18,7 @@ public class TransporteCargaInanimada extends Transporte {
 	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
+		sb.append("2").append(";").append(super.toString());
 		sb.append(";").append(cargaPerigosa);
 		return sb.toString();
 	}
