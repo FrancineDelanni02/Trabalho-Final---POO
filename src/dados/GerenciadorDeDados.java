@@ -18,11 +18,9 @@ public class GerenciadorDeDados {
         this.transportes = transportes;
     }
 
-    public void salvar(String name){
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(name+"CSV", true))) {
-            writer.write(frota.toString());
-            writer.newLine();
-            writer.write(transportes.toString());
+    public <T> void salvar(String name,T classe ){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(name + ".CSV", true))) {
+            writer.write(classe.toString());
             writer.newLine();
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -30,7 +28,7 @@ public class GerenciadorDeDados {
     }
 
     public void lerArquivo(String name){
-        Path path = Paths.get(name+"CSV");
+        Path path = Paths.get(name+".CSV");
         try (BufferedReader br = Files.newBufferedReader(path,
                 Charset.defaultCharset())) {
             String linha = null;
