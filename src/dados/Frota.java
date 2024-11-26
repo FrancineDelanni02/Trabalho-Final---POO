@@ -37,4 +37,19 @@ public class Frota {
         }
         return sb.toString();
     }
+
+    public String exibirDronesP() {
+        StringBuilder sb = new StringBuilder();
+        for (Drone d : drones) {
+            sb.append("Código: ").append(d.getCodigo())
+                    .append(", Custo Fixo: ").append(d.getCustoFixo())
+                    .append(", Autonomia: ").append(d.getAutonomia());
+            if (d instanceof DronePessoal) {
+                sb.append(", Quantidade Máxima de Pessoas: ")
+                        .append(((DronePessoal) d).getQtdMaxPessoas());
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
 }

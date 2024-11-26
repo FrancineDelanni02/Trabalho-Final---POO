@@ -2,6 +2,7 @@ package aplicacao;
 
 import dados.Drone;
 import dados.DroneCargaInanimada;
+import dados.DroneCargaViva;
 import dados.Frota;
 
 import javax.swing.*;
@@ -25,11 +26,15 @@ public class CadastroDroneDeCargaViva extends JPanel{
     private JTextField textFieldCustoF;
     private JLabel labelCusto;
     private JRadioButton climatizadoRadioButton;
+    private JButton VOLTARButton;
     private Frota frota;
 
-    public CadastroDroneDeCargaViva(Frota frota) {
+    private JPanel painelPrincipal;
+
+    public CadastroDroneDeCargaViva(Frota frota, JPanel painelPrincipal) {
         super();
         this.frota = frota;
+        this.painelPrincipal = painelPrincipal;
 
         buttonTerminar.addActionListener(new ActionListener() {
             @Override
@@ -47,7 +52,7 @@ public class CadastroDroneDeCargaViva extends JPanel{
                 double auto = Double.parseDouble(textFieldAuto.getText());
                 double peso = Double.parseDouble(textFieldPesoMax.getText());
                 boolean radioButton = climatizadoRadioButton.isSelected();
-                Drone drone = new DroneCargaInanimada(cod,custo,auto,peso,radioButton);
+                Drone drone = new DroneCargaViva(cod,custo,auto,peso,radioButton); //mudei para dronecargaviva
                 try{
                     frota.add(drone);
                     textArea.append("Drone cadastrado com sucesso!");
@@ -74,6 +79,14 @@ public class CadastroDroneDeCargaViva extends JPanel{
                 textFieldCod.setText("");
                 textFieldCustoF.setText("");
                 climatizadoRadioButton.setSelected(false);
+            }
+        });
+
+        VOLTARButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CardLayout layout = (CardLayout) painelPrincipal.getLayout();
+                layout.show(painelPrincipal, "telaEscolhaTipoDrone");
             }
         });
     }
