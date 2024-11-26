@@ -22,7 +22,7 @@ public class DronePessoal extends Drone {
 	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString()).append(";").append(qtdPessoas).append(";").append(calculaCustoKm());
+		sb.append("1").append(";").append(super.toString()).append(";").append(qtdPessoas).append(";").append(calculaCustoKm());
 		return sb.toString();
 	}
 }

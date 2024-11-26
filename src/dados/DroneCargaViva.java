@@ -23,7 +23,7 @@ public class DroneCargaViva extends DroneCarga {
 	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString()).append(";").append(climatizado).append(";").append(calculaCustoKm());
+		sb.append("3").append(";").append(super.toString()).append(";").append(climatizado).append(";").append(calculaCustoKm());
 		return sb.toString();
 	}
 }

@@ -23,7 +23,7 @@ public class DroneCargaInanimada extends DroneCarga {
 
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString()).append(";").append(protecao).append(";").append(calculaCustoKm());
+		sb.append("2").append(";").append(super.toString()).append(";").append(protecao).append(";").append(calculaCustoKm());
 		return sb.toString();
 	}
 }
