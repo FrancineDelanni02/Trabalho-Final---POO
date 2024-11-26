@@ -55,7 +55,7 @@ public abstract class Drone implements Comparable<Drone> {
 
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		sb.append(codigo).append(";").append(custoFixo).append(";").append(autonomia).append(";").append(alocado).append(";");
+		sb.append(codigo).append(";").append(custoFixo).append(";").append(autonomia).append(";").append(alocado);
 		return sb.toString();
 	}
 }

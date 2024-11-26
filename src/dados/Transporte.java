@@ -75,11 +75,12 @@ public abstract class Transporte implements Comparable<Transporte> {
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
 		sb.append(numero).append(";").append(nomeCliente).append(";").append(descricao).append(";").append(peso).append(";").append(latitudeOrigem);
-		sb.append(";").append(latitudeDestino).append(";").append(longitudeOrigem).append(";").append(longitudeDestino).append(situacao).append(";");
-		if(drone != null)
-			sb.append(drone);
+		sb.append(";").append(latitudeDestino).append(";").append(longitudeOrigem).append(";").append(longitudeDestino).append(";").append(situacao);
+		if(drone != null) {
+			sb.append(";").append(drone);
+			sb.append(";").append(calculaCusto());
+		}
 
-		sb.append(";").append(calculaCusto());
 		return sb.toString();
 	}
 
