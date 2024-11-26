@@ -1,16 +1,15 @@
 package dados;
 import java.util.LinkedList;
-import dados.Frota;
-import java.util.ArrayList;
+import java.util.Queue;
 
 public class TransporteColecao {
-    private ArrayList<Transporte> transportes; //ArrayList com todos os transportes criados
-    private ArrayList<Transporte> pendentes; //ArrayList somente para os transporte com estado PENDENTE
+    private Queue<Transporte> transportes; //precisa ser uma fila
+    private Queue<Transporte> pendentes;
     private Frota frota;
 
     public TransporteColecao(Frota frota){
-        this.transportes = new ArrayList<>();
-        this.pendentes = new ArrayList<>();
+        this.transportes = new LinkedList<>();
+        this.pendentes = new LinkedList<>();
         this.frota = frota;
     }
 
@@ -36,13 +35,15 @@ public class TransporteColecao {
         if(pendentes.isEmpty())
             throw new Exception("Não há transportes na fila");
 
-        for(Transporte t:pendentes){
-            Drone d = frota.getDroneDisponivel(t);
-            if(d != null){
-                t.setDrone(d);
-                pendentes.remove(t);
+            int tamanhoInicial = pendentes.size();
+            for (int i=0;i<tamanhoInicial;i++) {
+                Drone d = frota.getDroneDisponivel(pendentes.peek());
+                if (d != null) {
+                    pendentes.remove().setDrone(d); //remove primeiro elemento da fila e coloca um drone pra ele
+                } else {
+                    pendentes.add(pendentes.remove()); //adiciona elemento no final da fila enquanto remove primeiro elemento
+                }
             }
-        }
     }
 
     public void alterarSituacao(Transporte t,Estado situacao){
