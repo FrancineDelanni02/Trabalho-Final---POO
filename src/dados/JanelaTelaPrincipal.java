@@ -49,9 +49,6 @@ public class JanelaTelaPrincipal extends JFrame {
         TelaEscolhaTipoTransporte telaEscolhaTransporte = new TelaEscolhaTipoTransporte(painelPrincipal);
         escolhaTipoTransporte = telaEscolhaTransporte.getPainel();
 
-        CadastroTransportePessoal cadastroTransportePessoal = new CadastroTransportePessoal(painelPrincipal,transporteColecao);
-        cadTransportePessoal = cadastroTransportePessoal.getPainel();
-
         CadastroTransporteCargaViva cadastroTransporteCargaViva = new CadastroTransporteCargaViva(painelPrincipal, transporteColecao);
         cadTransporteCargaViva = cadastroTransporteCargaViva.getPainel();
 
@@ -86,7 +83,6 @@ public class JanelaTelaPrincipal extends JFrame {
         painelPrincipal.add(cadDroneCargaViva, "cadastroDroneDeCargaViva");
         painelPrincipal.add(cadDroneCargaInanimada, "cadastroDroneDeCargaInanimada");
         painelPrincipal.add(escolhaTipoTransporte, "escolhaTipoTransporte");
-        painelPrincipal.add(cadTransportePessoal, "cadastroTransportePessoal");
         painelPrincipal.add(cadTransporteCargaViva, "cadastroTransporteCargaViva");
         painelPrincipal.add(cadTransporteCargaInanimada, "cadastroTransporteCargaInanimada");
         painelPrincipal.add(alterarSitTransp, "telaAlterarSituacaoTransporte");
