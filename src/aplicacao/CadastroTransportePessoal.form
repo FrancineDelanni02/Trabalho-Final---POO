@@ -3,7 +3,11 @@
   <grid id="27dc6" binding="painel" layout-manager="GridLayoutManager" row-count="13" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
+<<<<<<< HEAD
       <xy x="20" y="20" width="711" height="466"/>
+=======
+      <xy x="20" y="20" width="711" height="434"/>
+>>>>>>> 2d62fa8483fbbd8964eda7b638a022bd9a0b774d
     </constraints>
     <properties/>
     <border type="none"/>
@@ -144,6 +148,32 @@
         </constraints>
         <properties/>
       </component>
+<<<<<<< HEAD
+=======
+      <component id="cb357" class="javax.swing.JLabel" binding="labelEstado">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="4876"/>
+          <text value="Estado"/>
+        </properties>
+      </component>
+      <component id="4876" class="javax.swing.JComboBox" binding="estadoComboBox" default-binding="true">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Escolha uma opção"/>
+            <item value="PENDENTE"/>
+            <item value="ALOCADO"/>
+            <item value="TERMINADO"/>
+            <item value="CANCELADO"/>
+          </model>
+        </properties>
+      </component>
+>>>>>>> 2d62fa8483fbbd8964eda7b638a022bd9a0b774d
       <component id="1a352" class="javax.swing.JLabel" binding="labelQtdPessoas">
         <constraints>
           <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
